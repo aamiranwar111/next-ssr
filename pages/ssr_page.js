@@ -11,9 +11,11 @@ function SSRPage() {
 
   if (error) return <div>failed to load</div>
   if (!data) return <div>loading...</div>
-  return <div>hello {data.Payload.pages.map((page) => (
-        <li key={page.slug}>{page.slug}</li>
-      ))}</div>
+  return <div>hello 
+        <li key={data.Payload.store.name}>{data.Payload.store.name}</li>
+        <li key={data.Payload.store.currency}>{data.Payload.store.currency}</li>
+        <li key={data.Payload.store.logo}>{data.Payload.store.logo}</li>
+    </div>
 }
 
 export default SSRPage
