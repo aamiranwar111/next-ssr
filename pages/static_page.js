@@ -6,15 +6,16 @@ function Blog({ posts }) {
       Pages:
       </b>
       {posts.Payload.pages.map((page) => (
-        <li>{page.slug}</li>
+        <li  key={page.slug} >{page.slug}</li>
       ))}
       <b>
       Categories:
       </b>
        {posts.Payload.categories.map((categorie) => (
-        <li>{categorie.en}</li>
+        <li  key={categorie.id}>{categorie.en}</li>
       ))}
     </ul>
+
   )
 }
 
